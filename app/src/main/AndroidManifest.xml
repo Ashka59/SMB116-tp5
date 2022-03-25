@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".ShowDatabase" />
 
+<!--        Question4-->
         <provider
                 android:name=".provider.MyContentProvider"
                 android:authorities="cnam.smb116.smb116_tp5.provider.MyContentProvider"

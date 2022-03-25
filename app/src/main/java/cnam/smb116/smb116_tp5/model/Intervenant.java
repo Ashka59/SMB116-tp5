@@ -2,21 +2,16 @@ package cnam.smb116.smb116_tp5.model;
 
 import android.provider.BaseColumns;
 
-import static android.os.Build.ID;
-
 public class Intervenant {
     private long id;
-    private String lastName;
-    private String firstName;
-    private String email;
+    private String nom;
+    private String prenom;
+    private String courriel;
 
-    public Intervenant() {
-    }
-
-    public Intervenant(String lastName, String firstName, String email) {
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.email = email;
+    public Intervenant(String nom, String prenom, String courriel) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.courriel = courriel;
     }
 
     public long getId() {
@@ -27,42 +22,42 @@ public class Intervenant {
         this.id = id;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getNom() {
+        return nom;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getPrenom() {
+        return prenom;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCourriel() {
+        return courriel;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCourriel(String courriel) {
+        this.courriel = courriel;
     }
 
     public static class TableDefinition implements BaseColumns {
         public static final String TABLE_NAME = "intervenant";
-        public static final String COLUMN_NAME_LASTNAME = "last_name";
-        public static final String COLUMN_NAME_FIRSTNAME = "first_name";
-        public static final String COLUMN_NAME_EMAIL = "email";
+        public static final String COLUMN_NAME_NOM = "Nom";
+        public static final String COLUMN_NAME_PRENOM = "Prénom";
+        public static final String COLUMN_NAME_COURRIEL = "Courriel";
 
         public static final String SQL_CREATE_ENTRIES =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY," +
-                        COLUMN_NAME_LASTNAME + " TEXT," +
-                        COLUMN_NAME_FIRSTNAME + " TEXT," +
-                        COLUMN_NAME_EMAIL + " TEXT )";
+                        COLUMN_NAME_NOM + " TEXT," +
+                        COLUMN_NAME_PRENOM + " TEXT," +
+                        COLUMN_NAME_COURRIEL + " TEXT )";
 
         public static final String SQL_DELETE_ENTRIES =
                 "DROP TABLE IF EXISTS " + TABLE_NAME;

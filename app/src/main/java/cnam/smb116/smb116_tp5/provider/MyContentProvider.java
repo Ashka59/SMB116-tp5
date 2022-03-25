@@ -10,7 +10,7 @@ import cnam.smb116.smb116_tp5.database.IntervenantDbHelper;
 import cnam.smb116.smb116_tp5.model.Intervenant;
 
 import static cnam.smb116.smb116_tp5.ShowDatabase.TABLE_NAME;
-
+//QUestion4
 public class MyContentProvider extends ContentProvider {
 
     public static final String AUTHORITY = "cnam.smb116.smb116_tp5.provider.MyContentProvider";

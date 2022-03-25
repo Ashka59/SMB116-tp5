@@ -8,7 +8,7 @@ import cnam.smb116.smb116_tp5.model.Intervenant;
 
 public class IntervenantDbHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "FeedReader.db";
+    public static final String DATABASE_NAME = "BDD_TP5.db";
 
     public IntervenantDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

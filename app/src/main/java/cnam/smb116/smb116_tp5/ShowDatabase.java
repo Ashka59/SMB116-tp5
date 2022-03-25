@@ -1,10 +1,12 @@
 package cnam.smb116.smb116_tp5;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 
 import androidx.annotation.Nullable;
@@ -14,6 +16,7 @@ import cnam.smb116.smb116_tp5.model.Intervenant;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ShowDatabase extends ListActivity {
     private static final String TAG = ShowDatabase.class.getName();
@@ -47,6 +50,12 @@ public class ShowDatabase extends ListActivity {
         while (cursor.moveToNext()){
             list.add(cursor.getString(1)+" "+cursor.getString(2)+" \n"+cursor.getString(3));
         }
+
+        //Question 5
+//        String random = list.get(new Random().nextInt(list.size()));
+//        list.clear();
+//        list.add(random);
+
         return list;
     }
 }

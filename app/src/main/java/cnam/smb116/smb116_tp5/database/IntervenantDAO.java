@@ -26,9 +26,9 @@ public class IntervenantDAO {
     public long create(Intervenant intervenant){
         db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(Intervenant.TableDefinition.COLUMN_NAME_LASTNAME, intervenant.getLastName());
-        values.put(Intervenant.TableDefinition.COLUMN_NAME_FIRSTNAME, intervenant.getFirstName());
-        values.put(Intervenant.TableDefinition.COLUMN_NAME_EMAIL, intervenant.getEmail());
+        values.put(Intervenant.TableDefinition.COLUMN_NAME_NOM, intervenant.getNom());
+        values.put(Intervenant.TableDefinition.COLUMN_NAME_PRENOM, intervenant.getPrenom());
+        values.put(Intervenant.TableDefinition.COLUMN_NAME_COURRIEL, intervenant.getCourriel());
 
         long newRowId = db.insert(Intervenant.TableDefinition.TABLE_NAME, null, values);
         db.close();
@@ -83,12 +83,10 @@ public class IntervenantDAO {
             if (!cursor.moveToNext()){
                 Log.i(TAG, "initialize");
                 Intervenant i1 = new Intervenant("Douin", "Jean-Michel", "jean-michel.douin@cnam.fr");
-                Intervenant i2 = new Intervenant("Farinone", "Jean-Marc", "jean-Marc.Farinone@cnam.fr");
-                Intervenant i3 = new Intervenant("Lemoine", "Frédéric", "frederic.lemoine@cnam.fr");
+                Intervenant i2 = new Intervenant("Lemoine", "Frédéric", "frederic.lemoine@cnam.fr");
 
                 this.create(i1);
                 this.create(i2);
-                this.create(i3);
             }
     }
 }
